@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>NOLA PS — Q3 FY 2025–26 Financial Accountability Report</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&family=Playfair+Display:wght@400;600;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --nola-red:#E8192C; --nola-yellow:#F5B800; --nola-teal:#00A9CE; --nola-blue:#003DA5; --nola-dark:#1a1a2e;
+    --bg-deep:#f4f6f9; --bg-card:#ffffff; --bg-card2:#f0f4f8; --bg-panel:#e8edf4;
+    --gold:var(--nola-blue); --gold-light:#1a56db; --gold-dim:#93aadf;
+    --green-strong:#15803d; --green-bright:#16a34a; --green-mid:#22c55e;
+    --yellow-warn:#d97706; --yellow-bright:var(--nola-yellow); --red-alert:var(--nola-red);
+    --text-primary:#111827; --text-secondary:#374151; --text-muted:#6b7280;
+    --border:rgba(0,61,165,0.15); --border-dim:rgba(0,0,0,0.08); --shadow:0 4px 24px rgba(0,0,0,0.10);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{font-family:'DM Sans',sans-serif;background:#f0f4f9;color:var(--text-primary);line-height:1.6;min-height:100vh}
+  .cover{position:relative;min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;padding:60px 40px;text-align:center}
+  .cover-bg{position:absolute;inset:0;background:linear-gradient(145deg,#003DA5 0%,#1a2e6e 40%,#001a4d 100%)}
+  .cover-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,184,0,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(245,184,0,0.07) 1px,transparent 1px);background-size:60px 60px}
+  .cover::before{content:'';position:absolute;top:0;left:0;width:8px;height:100%;background:var(--nola-red);z-index:3}
+  .cover::after{content:'';position:absolute;top:0;right:0;width:8px;height:100%;background:var(--nola-yellow);z-index:3}
+  .cover-content{position:relative;z-index:2;max-width:900px}
+  .district-badge{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(255,255,255,0.25);background:rgba(255,255,255,0.1);padding:8px 22px;border-radius:40px;font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;color:rgba(255,255,255,0.9);margin-bottom:40px}
+  .district-badge span{width:6px;height:6px;background:var(--nola-yellow);border-radius:50%}
+  .cover h1{font-family:'Playfair Display',serif;font-size:clamp(38px,6vw,76px);font-weight:900;line-height:1.0;letter-spacing:-0.02em;color:#fff;margin-bottom:20px}
+  .cover h1 em{font-style:normal;background:linear-gradient(135deg,#ffe066,var(--nola-yellow),#d4a000);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+  .cover-subtitle{font-size:17px;color:rgba(255,255,255,0.7);font-weight:300;max-width:560px;margin:0 auto 50px}
+  .cover-meta{display:flex;gap:50px;justify-content:center;flex-wrap:wrap;padding:30px 0;border-top:1px solid rgba(255,255,255,0.15);border-bottom:1px solid rgba(255,255,255,0.15);margin-bottom:50px}
+  .cover-meta-item{text-align:center}
+  .cover-meta-item .label{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;color:rgba(255,255,255,0.5);margin-bottom:6px}
+  .cover-meta-item .value{font-family:'Playfair Display',serif;font-size:22px;color:var(--nola-yellow);font-weight:700}
+  .kpi-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:1px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.15);border-radius:16px;overflow:hidden;width:100%}
+  .kpi-cell{background:rgba(0,20,60,0.5);padding:24px 16px;text-align:center}
+  .kpi-cell .kpi-num{font-family:'DM Mono',monospace;font-size:28px;font-weight:500;color:var(--nola-yellow);line-height:1}
+  .kpi-cell .kpi-label{font-size:10px;color:rgba(255,255,255,0.6);margin-top:8px;letter-spacing:0.05em}
+  .page{max-width:1280px;margin:0 auto;padding:80px 40px}
+  .section-header{display:flex;align-items:flex-start;gap:24px;margin-bottom:50px;padding-bottom:28px;border-bottom:1px solid var(--border-dim)}
+  .section-num{font-family:'DM Mono',monospace;font-size:13px;color:var(--nola-red);font-weight:500;padding-top:6px;white-space:nowrap}
+  .section-header h2{font-family:'Playfair Display',serif;font-size:clamp(26px,4vw,40px);font-weight:700;color:var(--text-primary);line-height:1.1}
+  .section-header p{font-size:15px;color:var(--text-secondary);margin-top:10px;max-width:700px}
+  .exec-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;margin-bottom:60px}
+  .exec-card{background:var(--bg-card);border:1px solid var(--border-dim);border-radius:16px;padding:32px;position:relative;overflow:hidden}
+  .exec-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px}
+  .exec-card.gold::before{background:linear-gradient(90deg,var(--gold),transparent)}
+  .exec-card.green::before{background:linear-gradient(90deg,var(--green-bright),transparent)}
+  .exec-card.warn::before{background:linear-gradient(90deg,var(--yellow-bright),transparent)}
+  .exec-card.red::before{background:linear-gradient(90deg,var(--red-alert),transparent)}
+  .exec-card h3{font-family:'Playfair Display',serif;font-size:20px;font-weight:600;margin-bottom:14px}
+  .exec-card p{font-size:14px;color:var(--text-secondary);line-height:1.75}
+  .exec-card ul{list-style:none;margin-top:12px}
+  .exec-card ul li{font-size:13.5px;color:var(--text-secondary);padding:5px 0;display:flex;gap:10px;align-items:flex-start}
+  .exec-card ul li::before{content:'→';color:var(--nola-blue);flex-shrink:0}
+  .full-card{grid-column:1/-1}
+  .findings-band{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin:60px 0}
+  .finding-pill{border-radius:14px;padding:24px;display:flex;gap:16px;align-items:flex-start}
+  .finding-pill.positive{background:rgba(22,163,74,0.1);border:1px solid rgba(22,163,74,0.25)}
+  .finding-pill.caution{background:rgba(202,138,4,0.1);border:1px solid rgba(202,138,4,0.25)}
+  .finding-pill.concern{background:rgba(220,38,38,0.08);border:1px solid rgba(220,38,38,0.2)}
+  .finding-icon{font-size:26px;flex-shrink:0;margin-top:2px}
+  .finding-pill h4{font-size:14px;font-weight:600;margin-bottom:6px}
+  .finding-pill p{font-size:13px;color:var(--text-secondary);line-height:1.6}
+  .metric-section{margin:80px 0}
+  .metric-header{background:var(--bg-card2);border:1px solid var(--border);border-radius:16px 16px 0 0;padding:24px 32px;display:flex;justify-content:space-between;align-items:center}
+  .metric-header-left h3{font-family:'Playfair Display',serif;font-size:22px;font-weight:700}
+  .metric-header-left p{font-size:13px;color:var(--text-muted);margin-top:4px}
+  .benchmark-badge{font-family:'DM Mono',monospace;font-size:12px;padding:6px 14px;border-radius:20px;font-weight:500}
+  .benchmark-badge.green{background:rgba(22,163,74,0.15);color:var(--green-bright);border:1px solid rgba(22,163,74,0.3)}
+  .benchmark-badge.yellow{background:rgba(234,179,8,0.12);color:var(--yellow-bright);border:1px solid rgba(234,179,8,0.25)}
+  .metric-body{background:var(--bg-card);border:1px solid var(--border-dim);border-top:none;border-radius:0 0 16px 16px;overflow:hidden}
+  .dual-chart{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .dual-chart>div{padding:32px}
+  .dual-chart>div:first-child{border-right:1px solid var(--border-dim)}
+  .chart-title{font-size:12px;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--nola-blue);margin-bottom:24px}
+  .bar-row{display:flex;align-items:center;gap:12px;padding:5px 0;border-bottom:1px solid rgba(0,0,0,0.05)}
+  .bar-row:last-child{border-bottom:none}
+  .bar-label{width:200px;flex-shrink:0;font-size:12px;color:var(--text-secondary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .bar-track{flex:1;height:18px;background:rgba(0,0,0,0.06);border-radius:4px;overflow:hidden;position:relative}
+  .bar-fill{height:100%;border-radius:4px}
+  .green-fill{background:linear-gradient(90deg,var(--green-strong),var(--green-mid))}
+  .yellow-fill{background:linear-gradient(90deg,#92400e,var(--yellow-warn))}
+  .gold-fill{background:linear-gradient(90deg,var(--gold-dim),var(--gold))}
+  .bar-fill-red{background:linear-gradient(90deg,#991b1b,#ef4444)}
+  .teal-fill{background:linear-gradient(90deg,#0e7490,var(--nola-teal))}
+  .bar-val{font-family:'DM Mono',monospace;font-size:12px;font-weight:500;color:var(--text-primary);min-width:60px;text-align:right}
+  .risk-section{margin:80px 0}
+  .risk-table{width:100%;border-collapse:collapse;background:var(--bg-card);border:1px solid var(--border-dim);border-radius:16px;overflow:hidden}
+  .risk-table thead tr{background:var(--bg-card2);border-bottom:2px solid var(--border)}
+  .risk-table thead th{padding:14px 16px;text-align:left;font-size:10px;letter-spacing:0.1em;text-transform:uppercase;color:var(--nola-blue);font-weight:600}
+  .risk-table tbody tr{border-bottom:1px solid rgba(0,0,0,0.05);transition:background 0.2s}
+  .risk-table tbody tr:hover{background:rgba(0,61,165,0.04)}
+  .risk-table tbody tr:last-child{border-bottom:none}
+  .risk-table td{padding:12px 16px;font-size:12.5px;color:var(--text-secondary)}
+  .risk-table td:first-child{color:var(--text-primary);font-weight:500;font-size:13px}
+  .status-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.05em}
+  .status-pill.critical{background:rgba(220,38,38,0.15);color:#f87171;border:1px solid rgba(220,38,38,0.3)}
+  .status-pill.watch{background:rgba(234,179,8,0.12);color:#ca8a04;border:1px solid rgba(234,179,8,0.25)}
+  .status-pill.strong{background:rgba(22,163,74,0.12);color:#16a34a;border:1px solid rgba(22,163,74,0.25)}
+  .rec-section{margin:80px 0}
+  .rec-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .rec-card{background:var(--bg-card);border:1px solid var(--border-dim);border-radius:16px;padding:28px;position:relative;overflow:hidden;transition:transform 0.3s,border-color 0.3s}
+  .rec-card:hover{transform:translateY(-4px);border-color:rgba(0,61,165,0.3);box-shadow:0 8px 24px rgba(0,61,165,0.1)}
+  .rec-card .rec-num{font-family:'DM Mono',monospace;font-size:42px;font-weight:500;color:rgba(0,61,165,0.10);position:absolute;top:16px;right:20px;line-height:1}
+  .rec-card .rec-tag{font-size:10px;letter-spacing:0.18em;text-transform:uppercase;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:14px;font-weight:600}
+  .rec-tag.immediate{background:rgba(220,38,38,0.15);color:#f87171}
+  .rec-tag.near{background:rgba(234,179,8,0.12);color:#ca8a04}
+  .rec-tag.strategic{background:rgba(22,163,74,0.12);color:#16a34a}
+  .rec-card h4{font-family:'Playfair Display',serif;font-size:17px;margin-bottom:10px}
+  .rec-card p{font-size:13px;color:var(--text-secondary);line-height:1.7}
+  .insight-box{border:1px solid rgba(0,61,165,0.25);border-left:3px solid var(--nola-blue);background:rgba(0,61,165,0.04);padding:20px 24px;border-radius:12px;margin:30px 0;font-size:14px;color:var(--text-secondary);line-height:1.8}
+  .insight-box strong{color:var(--nola-blue)}
+  .score-overview{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin:60px 0}
+  .score-item{background:var(--bg-card);border:1px solid var(--border-dim);border-radius:14px;padding:24px 20px;text-align:center}
+  .score-item .metric-val{font-family:'DM Mono',monospace;font-size:34px;font-weight:500;line-height:1;margin-bottom:8px}
+  .metric-val.excellent{color:var(--green-bright)}
+  .metric-val.good{color:#86efac}
+  .metric-val.warn{color:var(--yellow-bright)}
+  .metric-val.alert{color:#f87171}
+  .score-item .metric-name{font-size:11px;text-transform:uppercase;letter-spacing:0.1em;color:var(--text-muted)}
+  .score-item .metric-bench{font-size:12px;color:var(--nola-blue);margin-top:6px;opacity:0.7}
+  .divider{height:1px;background:var(--border-dim);margin:0 0 80px}
+  .report-footer{border-top:1px solid var(--border-dim);padding:50px 40px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;max-width:1280px;margin:0 auto}
+  .footer-brand{font-family:'Playfair Display',serif;font-size:18px;color:var(--nola-blue)}
+  .footer-brand span{display:block;font-family:'DM Sans',sans-serif;font-size:11px;color:var(--text-muted);letter-spacing:0.1em;text-transform:uppercase;margin-top:4px}
+  .footer-bar{height:6px;background:linear-gradient(90deg,var(--nola-red) 25%,var(--nola-yellow) 25% 50%,var(--nola-blue) 50% 75%,var(--nola-teal) 75%)}
+  @media(max-width:900px){
+    .dual-chart,.exec-grid,.findings-band,.rec-grid{grid-template-columns:1fr}
+    .kpi-strip{grid-template-columns:repeat(2,1fr)}
+    .score-overview{grid-template-columns:repeat(2,1fr)}
+    .bar-label{width:140px}
+  }
+</style>
+</head>
+<body>
+
+<!-- ── COVER ──────────────────────────────────────────────────────── -->
+<div class="cover">
+  <div class="cover-bg"></div>
+  <div class="cover-grid"></div>
+  <div class="cover-content">
+    <div class="district-badge"><span></span>NOLA Public Schools<span></span></div>
+    <h1>Financial <em>Accountability</em><br>Report</h1>
+    <p class="cover-subtitle">Comprehensive fiscal health assessment across all operator CMOs and schools — drawing from three full financial statements per submission.</p>
+    <div class="cover-meta">
+      <div class="cover-meta-item"><div class="label">Reporting Period</div><div class="value">Q3 FY 2025–26</div></div>
+      <div class="cover-meta-item"><div class="label">CMOs Analyzed</div><div class="value">28 of 29</div></div>
+      <div class="cover-meta-item"><div class="label">Report Date</div><div class="value">June 30, 2026</div></div>
+      <div class="cover-meta-item"><div class="label">Report Type</div><div class="value">Financial Accountability</div></div>
+    </div>
+    <p style="font-size:11px;color:rgba(255,255,255,0.45);margin-top:24px">
+      District operates 64+ schools across 29 CMOs. Sophie B. Wright has not yet submitted its Q3 report as of this report date — a reminder has been sent.
+    </p>
+    <div class="kpi-strip">
+      <div class="kpi-cell"><div class="kpi-num">96%</div><div class="kpi-label">Current Ratio ≥ 1.5</div></div>
+      <div class="kpi-cell"><div class="kpi-num">93%</div><div class="kpi-label">Cash ≥ 60 days</div></div>
+      <div class="kpi-cell"><div class="kpi-num">100%</div><div class="kpi-label">Leverage ≤ 0.90</div></div>
+      <div class="kpi-cell"><div class="kpi-num">100%</div><div class="kpi-label">Fund Balance ≥ 10%</div></div>
+      <div class="kpi-cell"><div class="kpi-num">46%</div><div class="kpi-label">Running Surplus</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="page">
+
+<!-- ── SECTION 01: EXECUTIVE SUMMARY ──────────────────────────────── -->
+<div class="section-header">
+  <div class="section-num">01 —</div>
+  <div>
+    <h2>Executive Summary</h2>
+    <p>A high-level synthesis of District-wide fiscal health for Q3 FY 2025–26, drawn from CSAF compliance metrics, operating performance, and personnel cost analysis across all 28 operator CMOs.</p>
+  </div>
+</div>
+
+<div class="exec-grid">
+  <div class="exec-card green">
+    <h3>Strengths</h3>
+    <ul><li>27 of 28 CMOs exceed the Current Ratio best practice of 1.5×</li>
+<li>All 28 CMOs maintain Liabilities-to-Assets ratios below 0.90</li>
+<li>All 28 CMOs hold Fund Balance Ratios above the 10% minimum</li></ul>
+  </div>
+  <div class="exec-card red">
+    <h3>Areas of Concern</h3>
+    <ul><li>2 CMOs below 60-day cash threshold</li></ul>
+  </div>
+</div>
+
+<div class="findings-band">
+  <div class="finding-pill positive">
+    <div class="finding-icon">✅</div>
+    <div>
+      <h4>Liquidity: System-Wide </h4>
+      <p>27 of 28 CMOs surpass the 1.5× Current Ratio benchmark. 26 of 28 meet the 60-day cash-on-hand threshold.</p>
+    </div>
+  </div>
+  <div class="finding-pill positive">
+    <div class="finding-icon">✅</div>
+    <div>
+      <h4>Operating Performance</h4>
+      <p>13 of 28 CMOs report operating surpluses through Q3. District-wide net surplus of -$8.5M.</p>
+    </div>
+  </div>
+  <div class="finding-pill positive">
+    <div class="finding-icon">🟢</div>
+    <div>
+      <h4>0 CMOs in Critical Tier</h4>
+      <p> No CMOs in Critical or Watch tier.</p>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── SECTION 02: LIQUIDITY ───────────────────────────────────────── -->
+<div class="section-header">
+  <div class="section-num">02 —</div>
+  <div>
+    <h2>Liquidity Analysis</h2>
+    <p>Current Ratio and Unrestricted Cash on Hand — the two primary measures of a school's ability to meet its short-term financial obligations.</p>
+  </div>
+</div>
+
+<div class="metric-section">
+  <div class="metric-header">
+    <div class="metric-header-left">
+      <h3>Current Ratio &amp; Cash on Hand</h3>
+      <p>Current Assets ÷ Current Liabilities &nbsp;|&nbsp; (Unrestricted Cash) ÷ ((Total Exp − Depreciation) / 365)</p>
+    </div>
+    <span class="benchmark-badge green">Best Practice: CR ≥ 1.5 &nbsp;|&nbsp; COH ≥ 60 days</span>
+  </div>
+  <div class="metric-body">
+    <div class="dual-chart">
+      <div>
+  <div class="chart-title">Current Ratio — Can bills be paid?</div>
+  <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Current Assets / Current Liabilities</div>
+  <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">Best Practice ≥ 1.5</div>
+  <div class="bar-row">
+  <div class="bar-label" title="Audubon Charter Schools">Audubon Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:90.9%"></div></div>
+  <div class="bar-val">52.79</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community School">Homer Plessy Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:62.2%"></div></div>
+  <div class="bar-val">36.11</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Willow School">The Willow School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:42.1%"></div></div>
+  <div class="bar-val">24.45</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C Williams Charter School">Fannie C Williams Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:41.3%"></div></div>
+  <div class="bar-val">24.01</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:38.0%"></div></div>
+  <div class="bar-val">22.05</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Charter School">Lake Forest Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:33.8%"></div></div>
+  <div class="bar-val">19.64</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:33.0%"></div></div>
+  <div class="bar-val">19.19</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:21.6%"></div></div>
+  <div class="bar-val">12.55</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elementary">Ben Franklin Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:21.5%"></div></div>
+  <div class="bar-val">12.48</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science High School">N.O. Math and Science High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:20.3%"></div></div>
+  <div class="bar-val">11.81</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success Preparatory Academy">Success Preparatory Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:20.0%"></div></div>
+  <div class="bar-val">11.64</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schools">ReNEW Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:18.0%"></div></div>
+  <div class="bar-val">10.44</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:17.3%"></div></div>
+  <div class="bar-val">10.06</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="FirstLine Schools">FirstLine Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:16.2%"></div></div>
+  <div class="bar-val">9.43</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Crescent City Schools">Crescent City Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:15.7%"></div></div>
+  <div class="bar-val">9.11</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:15.5%"></div></div>
+  <div class="bar-val">9.02</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Hynes Charter School Corporation">Hynes Charter School Corporation</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:15.4%"></div></div>
+  <div class="bar-val">8.93</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP New Orleans Schools">KIPP New Orleans Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:14.2%"></div></div>
+  <div class="bar-val">8.22</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune Elementary">Mary McLeod Bethune Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:13.7%"></div></div>
+  <div class="bar-val">7.98</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="InspireNOLA Charter Schools">InspireNOLA Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:13.7%"></div></div>
+  <div class="bar-val">7.98</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Charter Schools">Einstein Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:13.3%"></div></div>
+  <div class="bar-val">7.71</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Educators for Quality Alternatives">Educators for Quality Alternativ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:13.1%"></div></div>
+  <div class="bar-val">7.59</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Friends of King School, Dr. Martin Luther King, Jr. Elem">The Friends of King School, Dr. …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:11.1%"></div></div>
+  <div class="bar-val">6.42</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate Academies">Collegiate Academies</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:10.9%"></div></div>
+  <div class="bar-val">6.32</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="WARREN EASTON CHARTER HIGH SCHOOL">WARREN EASTON CHARTER HIGH SCHOO…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:9.8%"></div></div>
+  <div class="bar-val">5.67</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Algiers Charter School Association">Algiers Charter School Associati…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:2.7%"></div></div>
+  <div class="bar-val">1.56</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="CANO">CANO</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:2.7%"></div></div>
+  <div class="bar-val">1.55</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Young Audiences at Lawrence Crocker">Young Audiences at Lawrence Croc…</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:1.8%"></div></div>
+  <div class="bar-val">1.04</div>
+</div>
+</div>
+      <div>
+  <div class="chart-title">Unrestricted Cash on Hand</div>
+  <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Days of cash remaining if $0 revenue</div>
+  <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">Best Practice ≥ 60 days</div>
+  <div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elementary">Ben Franklin Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:90.9%"></div></div>
+  <div class="bar-val">551 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C Williams Charter School">Fannie C Williams Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:83.5%"></div></div>
+  <div class="bar-val">506 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:63.5%"></div></div>
+  <div class="bar-val">385 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Hynes Charter School Corporation">Hynes Charter School Corporation</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:61.0%"></div></div>
+  <div class="bar-val">370 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="FirstLine Schools">FirstLine Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:57.9%"></div></div>
+  <div class="bar-val">351 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="CANO">CANO</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:57.3%"></div></div>
+  <div class="bar-val">347 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community School">Homer Plessy Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:54.3%"></div></div>
+  <div class="bar-val">329 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Charter Schools">Einstein Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:46.9%"></div></div>
+  <div class="bar-val">284 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Charter School">Lake Forest Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:42.2%"></div></div>
+  <div class="bar-val">256 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:38.4%"></div></div>
+  <div class="bar-val">233 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:36.1%"></div></div>
+  <div class="bar-val">219 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="WARREN EASTON CHARTER HIGH SCHOOL">WARREN EASTON CHARTER HIGH SCHOO…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:33.5%"></div></div>
+  <div class="bar-val">203 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:33.0%"></div></div>
+  <div class="bar-val">200 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate Academies">Collegiate Academies</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:26.9%"></div></div>
+  <div class="bar-val">163 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune Elementary">Mary McLeod Bethune Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:24.4%"></div></div>
+  <div class="bar-val">148 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="InspireNOLA Charter Schools">InspireNOLA Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:24.4%"></div></div>
+  <div class="bar-val">148 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Friends of King School, Dr. Martin Luther King, Jr. Elem">The Friends of King School, Dr. …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:23.8%"></div></div>
+  <div class="bar-val">144 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Educators for Quality Alternatives">Educators for Quality Alternativ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:22.9%"></div></div>
+  <div class="bar-val">139 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success Preparatory Academy">Success Preparatory Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:22.9%"></div></div>
+  <div class="bar-val">139 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schools">ReNEW Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:22.8%"></div></div>
+  <div class="bar-val">138 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon Charter Schools">Audubon Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:21.6%"></div></div>
+  <div class="bar-val">131 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:15.0%"></div></div>
+  <div class="bar-val">91 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP New Orleans Schools">KIPP New Orleans Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:14.0%"></div></div>
+  <div class="bar-val">85 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Young Audiences at Lawrence Crocker">Young Audiences at Lawrence Croc…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:14.0%"></div></div>
+  <div class="bar-val">85 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Willow School">The Willow School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:12.9%"></div></div>
+  <div class="bar-val">78 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science High School">N.O. Math and Science High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:12.5%"></div></div>
+  <div class="bar-val">76 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Algiers Charter School Association">Algiers Charter School Associati…</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:9.6%"></div></div>
+  <div class="bar-val">58 days</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Crescent City Schools">Crescent City Schools</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:7.6%"></div></div>
+  <div class="bar-val">46 days</div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── SECTION 03: LEVERAGE & RESERVES ────────────────────────────── -->
+<div class="section-header">
+  <div class="section-num">03 —</div>
+  <div>
+    <h2>Leverage &amp; Reserve Adequacy</h2>
+    <p>Liabilities-to-Assets Ratio and Fund Balance Ratio — measuring structural financial resilience and the capacity to absorb unforeseen fiscal shocks.</p>
+  </div>
+</div>
+
+<div class="metric-section">
+  <div class="metric-header">
+    <div class="metric-header-left">
+      <h3>Liabilities to Assets &amp; Fund Balance</h3>
+      <p>Total Liabilities ÷ Total Assets &nbsp;|&nbsp; Unrestricted Fund Balance ÷ Total Expenditures</p>
+    </div>
+    <span class="benchmark-badge green">Best Practice: Liab/Assets ≤ 0.90 &nbsp;|&nbsp; Fund Balance ≥ 10%</span>
+  </div>
+  <div class="metric-body">
+    <div class="dual-chart">
+      <div>
+  <div class="chart-title">Liabilities-to-Assets Ratio</div>
+  <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Total Liabilities / Total Assets — lower is better</div>
+  <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">Best Practice ≤ 0.90</div>
+  <div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community School">Homer Plessy Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:3.0%"></div></div>
+  <div class="bar-val">0.03</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:4.0%"></div></div>
+  <div class="bar-val">0.04</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C Williams Charter School">Fannie C Williams Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:4.0%"></div></div>
+  <div class="bar-val">0.04</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:5.0%"></div></div>
+  <div class="bar-val">0.05</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Charter School">Lake Forest Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:5.0%"></div></div>
+  <div class="bar-val">0.05</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:6.0%"></div></div>
+  <div class="bar-val">0.06</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elementary">Ben Franklin Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:8.0%"></div></div>
+  <div class="bar-val">0.08</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success Preparatory Academy">Success Preparatory Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:8.0%"></div></div>
+  <div class="bar-val">0.08</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science High School">N.O. Math and Science High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:8.0%"></div></div>
+  <div class="bar-val">0.08</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schools">ReNEW Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:9.0%"></div></div>
+  <div class="bar-val">0.09</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP New Orleans Schools">KIPP New Orleans Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:10.0%"></div></div>
+  <div class="bar-val">0.10</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:10.0%"></div></div>
+  <div class="bar-val">0.10</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Educators for Quality Alternatives">Educators for Quality Alternativ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:11.0%"></div></div>
+  <div class="bar-val">0.11</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="FirstLine Schools">FirstLine Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:11.0%"></div></div>
+  <div class="bar-val">0.11</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune Elementary">Mary McLeod Bethune Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:12.0%"></div></div>
+  <div class="bar-val">0.12</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="InspireNOLA Charter Schools">InspireNOLA Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:12.0%"></div></div>
+  <div class="bar-val">0.12</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon Charter Schools">Audubon Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:13.0%"></div></div>
+  <div class="bar-val">0.13</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Charter Schools">Einstein Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:13.0%"></div></div>
+  <div class="bar-val">0.13</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Crescent City Schools">Crescent City Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:14.0%"></div></div>
+  <div class="bar-val">0.14</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate Academies">Collegiate Academies</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:15.0%"></div></div>
+  <div class="bar-val">0.15</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Friends of King School, Dr. Martin Luther King, Jr. Elem">The Friends of King School, Dr. …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:16.0%"></div></div>
+  <div class="bar-val">0.16</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:18.0%"></div></div>
+  <div class="bar-val">0.18</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Willow School">The Willow School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:20.0%"></div></div>
+  <div class="bar-val">0.20</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Algiers Charter School Association">Algiers Charter School Associati…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:44.0%"></div></div>
+  <div class="bar-val">0.44</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Hynes Charter School Corporation">Hynes Charter School Corporation</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:51.0%"></div></div>
+  <div class="bar-val">0.51</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="CANO">CANO</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:64.0%"></div></div>
+  <div class="bar-val">0.64</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="WARREN EASTON CHARTER HIGH SCHOOL">WARREN EASTON CHARTER HIGH SCHOO…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:65.0%"></div></div>
+  <div class="bar-val">0.65</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Young Audiences at Lawrence Crocker">Young Audiences at Lawrence Croc…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:81.0%"></div></div>
+  <div class="bar-val">0.81</div>
+</div>
+</div>
+      <div>
+  <div class="chart-title">Fund Balance Ratio</div>
+  <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Unrestricted Fund Balance / Total Expenditures</div>
+  <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">Best Practice ≥ 10%</div>
+  <div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elementary">Ben Franklin Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:95.2%"></div></div>
+  <div class="bar-val">162%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C Williams Charter School">Fannie C Williams Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:81.7%"></div></div>
+  <div class="bar-val">139%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:68.8%"></div></div>
+  <div class="bar-val">117%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community School">Homer Plessy Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:58.2%"></div></div>
+  <div class="bar-val">99%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="CANO">CANO</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:55.8%"></div></div>
+  <div class="bar-val">95%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Hynes Charter School Corporation">Hynes Charter School Corporation</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:55.8%"></div></div>
+  <div class="bar-val">95%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="FirstLine Schools">FirstLine Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:55.3%"></div></div>
+  <div class="bar-val">94%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Charter School">Lake Forest Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:54.1%"></div></div>
+  <div class="bar-val">92%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:51.7%"></div></div>
+  <div class="bar-val">88%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Willow School">The Willow School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:47.0%"></div></div>
+  <div class="bar-val">80%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:45.9%"></div></div>
+  <div class="bar-val">78%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Charter Schools">Einstein Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:41.7%"></div></div>
+  <div class="bar-val">71%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon Charter Schools">Audubon Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:40.0%"></div></div>
+  <div class="bar-val">68%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:30.6%"></div></div>
+  <div class="bar-val">52%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Educators for Quality Alternatives">Educators for Quality Alternativ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:26.5%"></div></div>
+  <div class="bar-val">45%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schools">ReNEW Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:26.5%"></div></div>
+  <div class="bar-val">45%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune Elementary">Mary McLeod Bethune Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:25.9%"></div></div>
+  <div class="bar-val">44%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="InspireNOLA Charter Schools">InspireNOLA Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:25.9%"></div></div>
+  <div class="bar-val">44%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success Preparatory Academy">Success Preparatory Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:25.3%"></div></div>
+  <div class="bar-val">43%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate Academies">Collegiate Academies</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:24.7%"></div></div>
+  <div class="bar-val">42%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Friends of King School, Dr. Martin Luther King, Jr. Elem">The Friends of King School, Dr. …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:23.5%"></div></div>
+  <div class="bar-val">40%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP New Orleans Schools">KIPP New Orleans Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:22.3%"></div></div>
+  <div class="bar-val">38%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Crescent City Schools">Crescent City Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:19.4%"></div></div>
+  <div class="bar-val">33%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science High School">N.O. Math and Science High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:14.1%"></div></div>
+  <div class="bar-val">24%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:13.5%"></div></div>
+  <div class="bar-val">23%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Algiers Charter School Association">Algiers Charter School Associati…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:9.4%"></div></div>
+  <div class="bar-val">16%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="WARREN EASTON CHARTER HIGH SCHOOL">WARREN EASTON CHARTER HIGH SCHOO…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:8.2%"></div></div>
+  <div class="bar-val">14%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Young Audiences at Lawrence Crocker">Young Audiences at Lawrence Croc…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:7.6%"></div></div>
+  <div class="bar-val">13%</div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="insight-box">
+  <strong>Fund Balance &amp; Operating Surplus — How They Connect:</strong> The Fund Balance is the school's cumulative savings account — the total of every prior year's surplus retained since opening.
+  The operating surplus shown in Section 04 is this year's deposit into that account. A school running a deficit is making a withdrawal. A shrinking fund balance year-over-year is the earliest signal of fiscal distress,
+  visible before any CSAF metric breaches its threshold.
+</div>
+
+<div class="divider"></div>
+
+<!-- ── SECTION 04: OPERATING PERFORMANCE ──────────────────────────── -->
+<div class="section-header">
+  <div class="section-num">04 —</div>
+  <div>
+    <h2>Operating Performance</h2>
+    <p>Operating Surplus or Deficit and Personnel Cost Burden — derived from the Statement of Revenues and Expenditures submitted in each QFR. These signals are not captured by CSAF ratios and reflect the income statement view of fiscal health.</p>
+  </div>
+</div>
+
+<div class="metric-section">
+  <div class="metric-header">
+    <div class="metric-header-left">
+      <h3>Surplus / Deficit &amp; Personnel Costs</h3>
+      <p>Total Revenue − Total Expenditure &nbsp;|&nbsp; (Salaries + Benefits) as % of Total Revenue</p>
+    </div>
+    <span class="benchmark-badge yellow">Best Practice: Positive margin &nbsp;|&nbsp; Personnel ≤ 85% of revenue</span>
+  </div>
+  <div class="metric-body">
+    <div class="dual-chart">
+      <div>
+  <div class="chart-title">Operating Surplus / (Deficit) — YTD</div>
+  <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Total Revenue minus Total Expenditure</div>
+  <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">Positive = surplus; negative = drawing down reserves</div>
+  <div class="bar-row">
+  <div class="bar-label" title="Collegiate Academies">Collegiate Academies</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:72.6%"></div></div>
+  <div class="bar-val">$3,501,595</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="CANO">CANO</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:57.9%"></div></div>
+  <div class="bar-val">$2,793,130</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon Charter Schools">Audubon Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:28.2%"></div></div>
+  <div class="bar-val">$1,361,580</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community School">Homer Plessy Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:20.8%"></div></div>
+  <div class="bar-val">$1,002,586</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Friends of King School, Dr. Martin Luther King, Jr. Elem">The Friends of King School, Dr. …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:20.3%"></div></div>
+  <div class="bar-val">$976,116</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:13.8%"></div></div>
+  <div class="bar-val">$664,582</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Willow School">The Willow School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:12.2%"></div></div>
+  <div class="bar-val">$586,928</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Educators for Quality Alternatives">Educators for Quality Alternativ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:4.6%"></div></div>
+  <div class="bar-val">$223,252</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Charter School">Lake Forest Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:4.4%"></div></div>
+  <div class="bar-val">$210,890</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:2.1%"></div></div>
+  <div class="bar-val">$99,712</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:1.9%"></div></div>
+  <div class="bar-val">$89,982</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C Williams Charter School">Fannie C Williams Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:1.7%"></div></div>
+  <div class="bar-val">$83,898</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Young Audiences at Lawrence Crocker">Young Audiences at Lawrence Croc…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:0.1%"></div></div>
+  <div class="bar-val">$4,751</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune Elementary">Mary McLeod Bethune Elementary</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:3.5%"></div></div>
+  <div class="bar-val">$170,642</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Hynes Charter School Corporation">Hynes Charter School Corporation</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:4.9%"></div></div>
+  <div class="bar-val">$237,807</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="FirstLine Schools">FirstLine Schools</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:7.5%"></div></div>
+  <div class="bar-val">$363,122</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success Preparatory Academy">Success Preparatory Academy</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:7.9%"></div></div>
+  <div class="bar-val">$382,725</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:8.3%"></div></div>
+  <div class="bar-val">$401,894</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science High School">N.O. Math and Science High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:10.0%"></div></div>
+  <div class="bar-val">$479,778</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:11.9%"></div></div>
+  <div class="bar-val">$572,578</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="WARREN EASTON CHARTER HIGH SCHOOL">WARREN EASTON CHARTER HIGH SCHOO…</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:11.9%"></div></div>
+  <div class="bar-val">$575,249</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elementary">Ben Franklin Elementary</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:18.9%"></div></div>
+  <div class="bar-val">$913,137</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="InspireNOLA Charter Schools">InspireNOLA Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:20.7%"></div></div>
+  <div class="bar-val">$999,712</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Crescent City Schools">Crescent City Schools</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:29.4%"></div></div>
+  <div class="bar-val">$1,418,394</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schools">ReNEW Schools</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:37.0%"></div></div>
+  <div class="bar-val">$1,783,982</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Charter Schools">Einstein Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:66.6%"></div></div>
+  <div class="bar-val">$3,211,048</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP New Orleans Schools">KIPP New Orleans Schools</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:88.0%"></div></div>
+  <div class="bar-val">$4,242,376</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Algiers Charter School Association">Algiers Charter School Associati…</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:90.9%"></div></div>
+  <div class="bar-val">$4,381,760</div>
+</div>
+</div>
+      <div>
+  <div class="chart-title">Personnel Cost % of Revenue</div>
+  <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">(Salaries + Benefits) / Total Revenue</div>
+  <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">≤75% healthy &nbsp;|&nbsp; 75–85% moderate &nbsp;|&nbsp; >85% high risk</div>
+  <div class="bar-row">
+  <div class="bar-label" title="CANO">CANO</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:46.6%"></div></div>
+  <div class="bar-val">46.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:54.6%"></div></div>
+  <div class="bar-val">54.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon Charter Schools">Audubon Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:54.9%"></div></div>
+  <div class="bar-val">54.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate Academies">Collegiate Academies</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:55.7%"></div></div>
+  <div class="bar-val">55.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:56.1%"></div></div>
+  <div class="bar-val">56.1%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Young Audiences at Lawrence Crocker">Young Audiences at Lawrence Croc…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:58.5%"></div></div>
+  <div class="bar-val">58.5%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Friends of King School, Dr. Martin Luther King, Jr. Elem">The Friends of King School, Dr. …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:58.6%"></div></div>
+  <div class="bar-val">58.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community School">Homer Plessy Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:59.0%"></div></div>
+  <div class="bar-val">59.0%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="FirstLine Schools">FirstLine Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:59.3%"></div></div>
+  <div class="bar-val">59.3%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Educators for Quality Alternatives">Educators for Quality Alternativ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:60.0%"></div></div>
+  <div class="bar-val">60.0%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C Williams Charter School">Fannie C Williams Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:60.3%"></div></div>
+  <div class="bar-val">60.3%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Charter School">Lake Forest Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:60.5%"></div></div>
+  <div class="bar-val">60.5%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="WARREN EASTON CHARTER HIGH SCHOOL">WARREN EASTON CHARTER HIGH SCHOO…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:62.6%"></div></div>
+  <div class="bar-val">62.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:63.2%"></div></div>
+  <div class="bar-val">63.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP New Orleans Schools">KIPP New Orleans Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:63.8%"></div></div>
+  <div class="bar-val">63.8%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:63.9%"></div></div>
+  <div class="bar-val">63.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science High School">N.O. Math and Science High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:65.7%"></div></div>
+  <div class="bar-val">65.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elementary">Ben Franklin Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:65.7%"></div></div>
+  <div class="bar-val">65.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune Elementary">Mary McLeod Bethune Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:65.9%"></div></div>
+  <div class="bar-val">65.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="InspireNOLA Charter Schools">InspireNOLA Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:66.6%"></div></div>
+  <div class="bar-val">66.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success Preparatory Academy">Success Preparatory Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:67.0%"></div></div>
+  <div class="bar-val">67.0%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Hynes Charter School Corporation">Hynes Charter School Corporation</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:67.8%"></div></div>
+  <div class="bar-val">67.8%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Charter Schools">Einstein Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:70.7%"></div></div>
+  <div class="bar-val">70.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schools">ReNEW Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:70.8%"></div></div>
+  <div class="bar-val">70.8%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:71.6%"></div></div>
+  <div class="bar-val">71.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Willow School">The Willow School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:71.6%"></div></div>
+  <div class="bar-val">71.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Crescent City Schools">Crescent City Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:73.9%"></div></div>
+  <div class="bar-val">73.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Algiers Charter School Association">Algiers Charter School Associati…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.0%"></div></div>
+  <div class="bar-val">78.0%</div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── SECTION 05: REVENUE & BUDGET INTELLIGENCE ──────────────────── -->
+<div class="section-header">
+  <div class="section-num">05 —</div>
+  <div>
+    <h2>Revenue &amp; Budget Intelligence</h2>
+    <p>MFP Revenue Concentration and Budget Achievement Rate — showing how dependent each school is on per-pupil enrollment funding, and how closely actual collections are tracking the adopted budget through Q3.</p>
+  </div>
+</div>
+
+<div class="metric-section">
+  <div class="metric-header">
+    <div class="metric-header-left">
+      <h3>Revenue Mix &amp; Budget Execution</h3>
+      <p>MFP (Local + State) as % of total revenue &nbsp;|&nbsp; Actual Revenue ÷ Annual Budget</p>
+    </div>
+    <span class="benchmark-badge yellow">MFP &gt;80%: high enrollment risk &nbsp;|&nbsp; Q3 target utilization ~70–80%</span>
+  </div>
+  <div class="metric-body">
+    <div class="dual-chart">
+      <div>
+  <div class="chart-title">MFP Revenue Concentration</div>
+  <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">(MFP Local + MFP State) / Total Revenue</div>
+  <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">Higher % = greater exposure to enrollment decline</div>
+  <div class="bar-row">
+  <div class="bar-label" title="CANO">CANO</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:58.9%"></div></div>
+  <div class="bar-val">58.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Educators for Quality Alternatives">Educators for Quality Alternativ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:66.2%"></div></div>
+  <div class="bar-val">66.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success Preparatory Academy">Success Preparatory Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:67.6%"></div></div>
+  <div class="bar-val">67.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Crescent City Schools">Crescent City Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:68.2%"></div></div>
+  <div class="bar-val">68.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Charter Schools">Einstein Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:68.4%"></div></div>
+  <div class="bar-val">68.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="FirstLine Schools">FirstLine Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:68.6%"></div></div>
+  <div class="bar-val">68.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Friends of King School, Dr. Martin Luther King, Jr. Elem">The Friends of King School, Dr. …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:70.2%"></div></div>
+  <div class="bar-val">70.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community School">Homer Plessy Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:70.9%"></div></div>
+  <div class="bar-val">70.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Algiers Charter School Association">Algiers Charter School Associati…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:71.4%"></div></div>
+  <div class="bar-val">71.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:73.0%"></div></div>
+  <div class="bar-val">73.0%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Young Audiences at Lawrence Crocker">Young Audiences at Lawrence Croc…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:73.4%"></div></div>
+  <div class="bar-val">73.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP New Orleans Schools">KIPP New Orleans Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.5%"></div></div>
+  <div class="bar-val">75.5%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.6%"></div></div>
+  <div class="bar-val">75.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C Williams Charter School">Fannie C Williams Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.3%"></div></div>
+  <div class="bar-val">76.3%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="InspireNOLA Charter Schools">InspireNOLA Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.6%"></div></div>
+  <div class="bar-val">76.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.6%"></div></div>
+  <div class="bar-val">76.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon Charter Schools">Audubon Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.7%"></div></div>
+  <div class="bar-val">76.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schools">ReNEW Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.1%"></div></div>
+  <div class="bar-val">78.1%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune Elementary">Mary McLeod Bethune Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:79.6%"></div></div>
+  <div class="bar-val">79.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science High School">N.O. Math and Science High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:80.7%"></div></div>
+  <div class="bar-val">80.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elementary">Ben Franklin Elementary</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:81.3%"></div></div>
+  <div class="bar-val">81.3%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate Academies">Collegiate Academies</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:81.8%"></div></div>
+  <div class="bar-val">81.8%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Willow School">The Willow School</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:83.7%"></div></div>
+  <div class="bar-val">83.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:83.9%"></div></div>
+  <div class="bar-val">83.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:84.2%"></div></div>
+  <div class="bar-val">84.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Hynes Charter School Corporation">Hynes Charter School Corporation</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:86.6%"></div></div>
+  <div class="bar-val">86.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="WARREN EASTON CHARTER HIGH SCHOOL">WARREN EASTON CHARTER HIGH SCHOO…</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:86.9%"></div></div>
+  <div class="bar-val">86.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Charter School">Lake Forest Charter School</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:89.0%"></div></div>
+  <div class="bar-val">89.0%</div>
+</div>
+</div>
+      <div>
+  <div class="chart-title">Revenue Budget Achievement</div>
+  <div style="font-size:12px;color:var(--text-muted);margin-bottom:4px">Actual Revenue YTD / Annual Budget</div>
+  <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">At Q3 expect ~70–80%. Below 65% = shortfall risk</div>
+  <div class="bar-row">
+  <div class="bar-label" title="CANO">CANO</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:90.9%"></div></div>
+  <div class="bar-val">90.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon Charter Schools">Audubon Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:88.5%"></div></div>
+  <div class="bar-val">88.5%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="WARREN EASTON CHARTER HIGH SCHOOL">WARREN EASTON CHARTER HIGH SCHOO…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:84.4%"></div></div>
+  <div class="bar-val">84.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community School">Homer Plessy Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:83.5%"></div></div>
+  <div class="bar-val">83.5%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Charter Schools">Einstein Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:81.0%"></div></div>
+  <div class="bar-val">81.0%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Friends of King School, Dr. Martin Luther King, Jr. Elem">The Friends of King School, Dr. …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:80.4%"></div></div>
+  <div class="bar-val">80.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:79.2%"></div></div>
+  <div class="bar-val">79.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Hynes Charter School Corporation">Hynes Charter School Corporation</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.7%"></div></div>
+  <div class="bar-val">78.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP New Orleans Schools">KIPP New Orleans Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.0%"></div></div>
+  <div class="bar-val">78.0%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="FirstLine Schools">FirstLine Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:77.6%"></div></div>
+  <div class="bar-val">77.6%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Crescent City Schools">Crescent City Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:77.4%"></div></div>
+  <div class="bar-val">77.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Willow School">The Willow School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:77.1%"></div></div>
+  <div class="bar-val">77.1%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.1%"></div></div>
+  <div class="bar-val">76.1%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.7%"></div></div>
+  <div class="bar-val">75.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Educators for Quality Alternatives">Educators for Quality Alternativ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.3%"></div></div>
+  <div class="bar-val">75.3%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate Academies">Collegiate Academies</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.8%"></div></div>
+  <div class="bar-val">74.8%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.3%"></div></div>
+  <div class="bar-val">74.3%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schools">ReNEW Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.2%"></div></div>
+  <div class="bar-val">74.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Young Audiences at Lawrence Crocker">Young Audiences at Lawrence Croc…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.0%"></div></div>
+  <div class="bar-val">74.0%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune Elementary">Mary McLeod Bethune Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:73.7%"></div></div>
+  <div class="bar-val">73.7%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C Williams Charter School">Fannie C Williams Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:73.4%"></div></div>
+  <div class="bar-val">73.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="InspireNOLA Charter Schools">InspireNOLA Charter Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:73.4%"></div></div>
+  <div class="bar-val">73.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elementary">Ben Franklin Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:73.0%"></div></div>
+  <div class="bar-val">73.0%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success Preparatory Academy">Success Preparatory Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:71.2%"></div></div>
+  <div class="bar-val">71.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:70.4%"></div></div>
+  <div class="bar-val">70.4%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Charter School">Lake Forest Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:70.2%"></div></div>
+  <div class="bar-val">70.2%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Algiers Charter School Association">Algiers Charter School Associati…</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:67.9%"></div></div>
+  <div class="bar-val">67.9%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science High School">N.O. Math and Science High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:63.3%"></div></div>
+  <div class="bar-val">63.3%</div>
+</div>
+</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+
+<!-- ── SECTION 06: BUDGET-TO-ENROLLMENT ──────────────────────── -->
+<div class="section-header">
+  <div class="section-num">06 —</div>
+  <div>
+    <h2>Budget-to-Enrollment Performance</h2>
+    <p>The Budget-to-Enrollment Ratio tests whether actual student enrollment is sufficient to support
+    planned school budgets. Data covers 63 schools across all operator CMOs.
+    Persistent gaps signal enrollment erosion or over-budgeting that will erode per-pupil MFP funding.</p>
+  </div>
+</div>
+<div class="insight-box">
+  <strong>Governance Update:</strong> OPSB voted to accept Einstein Group's relinquishment of the Sarah T. Reed High School charter, effective June 30, 2026, and to consolidate Village de l'Est Elementary and Einstein Middle into Sherwood Forest Elementary — part of a district effort to right-size facilities to actual enrollment.
+</div>
+<div class="metric-section">
+  <div class="metric-header">
+    <div class="metric-header-left">
+      <h3>Enrollment vs. Budget — All 63 Schools</h3>
+      <p>Actual Enrollment ÷ Budgeted Enrollment &nbsp;|&nbsp; Q3 FY 2025–26</p>
+    </div>
+    <span class="benchmark-badge green">Best Practice ≥ 95% &nbsp;|&nbsp; 56 of 63 schools passing</span>
+  </div>
+  <div class="metric-body">
+    <div class="dual-chart">
+      <div>
+        <div class="chart-title">🟢 High Performers — At or Above Target (≥ 96%)</div>
+        <div style="font-size:11px;color:var(--nola-blue);margin-bottom:20px;font-weight:600">Best Practice ≥ 95%</div>
+        <div class="bar-row">
+  <div class="bar-label" title="The Net-Central City (HS)">The Net-Central City (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:93.1%"></div></div>
+  <div class="bar-val">121%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Moton Lakefront">ReNEW Moton Lakefront</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:87.7%"></div></div>
+  <div class="bar-val">114%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Dr. King Charter School FOKS">Dr. King Charter School FOKS</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:83.1%"></div></div>
+  <div class="bar-val">108%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP: Believe">KIPP: Believe</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:81.5%"></div></div>
+  <div class="bar-val">106%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Inspire: McDonogh #35 (HS)">Inspire: McDonogh #35 (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:80.8%"></div></div>
+  <div class="bar-val">105%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The NET-East (HS)">The NET-East (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:80.8%"></div></div>
+  <div class="bar-val">105%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Village de l'Est">Village de l'Est</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:80.0%"></div></div>
+  <div class="bar-val">104%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Warren Easton High School (HS)">Warren Easton High School (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:80.0%"></div></div>
+  <div class="bar-val">104%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP: Leadership">KIPP: Leadership</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:80.0%"></div></div>
+  <div class="bar-val">104%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Inspire: Eleanor McMain (HS)">Inspire: Eleanor McMain (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:80.0%"></div></div>
+  <div class="bar-val">104%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Benjamin Franklin High School">Benjamin Franklin High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:79.2%"></div></div>
+  <div class="bar-val">103%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP: Morial">KIPP: Morial</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:79.2%"></div></div>
+  <div class="bar-val">103%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Inspire: Edna Karr High School (HS)">Inspire: Edna Karr High School (…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:79.2%"></div></div>
+  <div class="bar-val">103%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon (Uptown)">Audubon (Uptown)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.5%"></div></div>
+  <div class="bar-val">102%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Fannie C. Williams Charter (ES)">Fannie C. Williams Charter (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.5%"></div></div>
+  <div class="bar-val">102%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Booker T. Washington High School">Booker T. Washington High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.5%"></div></div>
+  <div class="bar-val">102%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="The Net-Gentilly (HS)">The Net-Gentilly (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.5%"></div></div>
+  <div class="bar-val">102%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Langston Hughes Academy (ES)">Langston Hughes Academy (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:78.5%"></div></div>
+  <div class="bar-val">102%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Arthur Ashe Charter (ES)">Arthur Ashe Charter (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:77.7%"></div></div>
+  <div class="bar-val">101%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mary McLeod Bethune ES">Mary McLeod Bethune ES</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:77.7%"></div></div>
+  <div class="bar-val">101%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Dolores T. Aaron">ReNEW Dolores T. Aaron</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:77.7%"></div></div>
+  <div class="bar-val">101%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP: Central City">KIPP: Central City</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:77.7%"></div></div>
+  <div class="bar-val">101%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="N.O. Math and Science (HS)">N.O. Math and Science (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:77.7%"></div></div>
+  <div class="bar-val">101%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate: Abramson Sci (HS)">Collegiate: Abramson Sci (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.9%"></div></div>
+  <div class="bar-val">100%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate: G.W. Carver High School">Collegiate: G.W. Carver High Sch…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.9%"></div></div>
+  <div class="bar-val">100%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lake Forest Elementary (ES)">Lake Forest Elementary (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.9%"></div></div>
+  <div class="bar-val">100%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Laurel Elementary">ReNEW Laurel Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.9%"></div></div>
+  <div class="bar-val">100%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Inspire: Andrew H. Wilson (ES)">Inspire: Andrew H. Wilson (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.2%"></div></div>
+  <div class="bar-val">99%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Lakeview (ES)">Lakeview (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.2%"></div></div>
+  <div class="bar-val">99%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Frederick A. Douglass High School">Frederick A. Douglass High Schoo…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.2%"></div></div>
+  <div class="bar-val">99%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Dorathy Height">Dorathy Height</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.2%"></div></div>
+  <div class="bar-val">99%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ReNEW Schaumburg Elementary">ReNEW Schaumburg Elementary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.2%"></div></div>
+  <div class="bar-val">99%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Sophie B. Wright Charter (HS)">Sophie B. Wright Charter (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.2%"></div></div>
+  <div class="bar-val">99%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="KIPP: East Community Primary">KIPP: East Community Primary</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:76.2%"></div></div>
+  <div class="bar-val">99%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Inspire: Alice M. Harte Charter (ES)">Inspire: Alice M. Harte Charter …</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Bricolage Academy">Bricolage Academy</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ACSA Behrman">ACSA Behrman</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Samuel J. Green Charter (ES)">Samuel J. Green Charter (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Harriet Tubman">Harriet Tubman</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Inspire: Capdau S.T.E.A.M. (ES)">Inspire: Capdau S.T.E.A.M. (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Homer Plessy Community Schools">Homer Plessy Community Schools</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate: Livingston Collegiate">Collegiate: Livingston Collegiat…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Morris Jeff Community School">Morris Jeff Community School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:75.4%"></div></div>
+  <div class="bar-val">98%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Audubon (Gentilly)">Audubon (Gentilly)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate: Opportunities Academy">Collegiate: Opportunities Academ…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Inspire: Dwight D. Eisenhower (ES)">Inspire: Dwight D. Eisenhower (E…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="UNO (ES)">UNO (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Collegiate: Walter L. Cohen (HS)">Collegiate: Walter L. Cohen (HS)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Elan Academy Charter School">Elan Academy Charter School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Parkview (ES)">Parkview (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Success at Thurgood Marshall (ES)">Success at Thurgood Marshall (ES…</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Mildred Osborne">Mildred Osborne</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="YACS at Lawrence D. Crocker (ES)">YACS at Lawrence D. Crocker (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Phillis Wheatley Community (ES)">Phillis Wheatley Community (ES)</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="John F. Kennedy High School">John F. Kennedy High School</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:74.6%"></div></div>
+  <div class="bar-val">97%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Ben Franklin Elem./Middle">Ben Franklin Elem./Middle</div>
+  <div class="bar-track"><div class="bar-fill green-fill" style="width:73.8%"></div></div>
+  <div class="bar-val">96%</div>
+</div>
+      </div>
+      <div>
+        <div class="chart-title">⚠️ Below Threshold — Requires Enrollment Recovery Plan</div>
+        <div style="font-size:11px;color:var(--nola-red);margin-bottom:20px;font-weight:600">Below 95% best practice floor — 7 schools</div>
+        <div class="bar-row">
+  <div class="bar-label" title="(CANO): Foundation Prep Charter">(CANO): Foundation Prep Charter</div>
+  <div class="bar-track"><div class="bar-fill bar-fill-red" style="width:52.3%"></div></div>
+  <div class="bar-val">68%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Einstein Middle / Sarah T. Reed">Einstein Middle / Sarah T. Reed</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:64.6%"></div></div>
+  <div class="bar-val">84%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Sherwood Forest">Sherwood Forest</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:66.9%"></div></div>
+  <div class="bar-val">87%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="ACSA Landry">ACSA Landry</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:68.5%"></div></div>
+  <div class="bar-val">89%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Rooted School">Rooted School</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:69.2%"></div></div>
+  <div class="bar-val">90%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="(CANO): Esperanza">(CANO): Esperanza</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:70.0%"></div></div>
+  <div class="bar-val">91%</div>
+</div><div class="bar-row">
+  <div class="bar-label" title="Sarah T. Reed High School (HS)">Sarah T. Reed High School (HS)</div>
+  <div class="bar-track"><div class="bar-fill yellow-fill" style="width:70.0%"></div></div>
+  <div class="bar-val">91%</div>
+</div>
+        <div style="margin-top:20px;border:1px solid rgba(232,25,44,0.3);border-left:3px solid var(--nola-red);
+background:rgba(232,25,44,0.05);padding:16px 20px;border-radius:10px">
+<div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;
+color:var(--nola-red);margin-bottom:6px">⚠ Critical Alert: (CANO): Foundation Prep Charter</div>
+<p style="font-size:13px;color:var(--text-secondary);line-height:1.7">
+At 68% Budget-to-Enrollment, this campus sits 27 percentage points
+below the best practice floor. This represents the most severe enrollment-to-budget misalignment
+in the district and requires an immediate turnaround plan including enrollment drives,
+potential grade restructuring, and budget right-sizing.</p>
+</div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="divider"></div>
+
+
+<!-- ── SECTION 07: RISK CLASSIFICATION MATRIX ─────────────────────── -->
+<div class="section-header">
+  <div class="section-num">07 —</div>
+  <div>
+    <h2>Risk Classification Matrix</h2>
+    <p>All 28 CMOs classified by composite financial risk profile. Now includes operating margin, personnel cost burden, and operating cash flow alongside the four standard CSAF metrics — giving a complete view of fiscal position in one table.</p>
+  </div>
+</div>
+
+<div class="risk-section">
+  <div style="overflow-x:auto">
+    <table class="risk-table">
+      <thead>
+        <tr>
+          <th>School</th>
+          <th>Current Ratio<br><span style="font-weight:400;opacity:.7">≥ 1.5</span></th>
+          <th>Cash (days)<br><span style="font-weight:400;opacity:.7">≥ 60</span></th>
+          <th>Liab / Assets<br><span style="font-weight:400;opacity:.7">≤ 0.90</span></th>
+          <th>Fund Balance<br><span style="font-weight:400;opacity:.7">≥ 10%</span></th>
+          <th>Op. Margin<br><span style="font-weight:400;opacity:.7">Positive</span></th>
+          <th>Personnel %<br><span style="font-weight:400;opacity:.7">≤ 85%</span></th>
+          <th>Op. Cash Flow<br><span style="font-weight:400;opacity:.7">Positive</span></th>
+          <th>Risk</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+  <td>Algiers Charter School Association</td>
+  <td style="color:#4ade80;font-weight:600">1.56</td>
+  <td style="color:#fbbf24;font-weight:600">58</td>
+  <td style="color:#4ade80;font-weight:600">0.44</td>
+  <td style="color:#4ade80;font-weight:600">16.0%</td>
+  <td style="color:#f87171;font-weight:600">-25.2%</td>
+  <td style="color:#fbbf24;font-weight:600">78.0%</td>
+  <td style="color:#f87171;font-weight:600">-$4.9M</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>Ben Franklin Elementary</td>
+  <td style="color:#4ade80;font-weight:600">12.48</td>
+  <td style="color:#4ade80;font-weight:600">551</td>
+  <td style="color:#4ade80;font-weight:600">0.08</td>
+  <td style="color:#4ade80;font-weight:600">162.0%</td>
+  <td style="color:#f87171;font-weight:600">-10.6%</td>
+  <td style="color:#4ade80;font-weight:600">65.7%</td>
+  <td style="color:#4ade80;font-weight:600">$181K</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>Crescent City Schools</td>
+  <td style="color:#4ade80;font-weight:600">9.11</td>
+  <td style="color:#fbbf24;font-weight:600">46</td>
+  <td style="color:#4ade80;font-weight:600">0.14</td>
+  <td style="color:#4ade80;font-weight:600">33.0%</td>
+  <td style="color:#f87171;font-weight:600">-3.7%</td>
+  <td style="color:#4ade80;font-weight:600">73.9%</td>
+  <td style="color:#f87171;font-weight:600">-$7.3M</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>Einstein Charter Schools</td>
+  <td style="color:#4ade80;font-weight:600">7.71</td>
+  <td style="color:#4ade80;font-weight:600">284</td>
+  <td style="color:#4ade80;font-weight:600">0.13</td>
+  <td style="color:#4ade80;font-weight:600">71.0%</td>
+  <td style="color:#f87171;font-weight:600">-17.3%</td>
+  <td style="color:#4ade80;font-weight:600">70.7%</td>
+  <td style="color:#f87171;font-weight:600">-$288K</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>Elan Academy Charter School</td>
+  <td style="color:#4ade80;font-weight:600">19.19</td>
+  <td style="color:#4ade80;font-weight:600">385</td>
+  <td style="color:#4ade80;font-weight:600">0.05</td>
+  <td style="color:#4ade80;font-weight:600">117.0%</td>
+  <td style="color:#f87171;font-weight:600">-7.8%</td>
+  <td style="color:#4ade80;font-weight:600">54.6%</td>
+  <td style="color:#f87171;font-weight:600">-$482K</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>KIPP New Orleans Schools</td>
+  <td style="color:#4ade80;font-weight:600">8.22</td>
+  <td style="color:#4ade80;font-weight:600">85</td>
+  <td style="color:#4ade80;font-weight:600">0.10</td>
+  <td style="color:#4ade80;font-weight:600">38.0%</td>
+  <td style="color:#f87171;font-weight:600">-5.5%</td>
+  <td style="color:#4ade80;font-weight:600">63.8%</td>
+  <td style="color:#f87171;font-weight:600">-$1.6M</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>N.O. Math and Science High School</td>
+  <td style="color:#4ade80;font-weight:600">11.81</td>
+  <td style="color:#4ade80;font-weight:600">76</td>
+  <td style="color:#4ade80;font-weight:600">0.08</td>
+  <td style="color:#4ade80;font-weight:600">24.0%</td>
+  <td style="color:#f87171;font-weight:600">-6.2%</td>
+  <td style="color:#4ade80;font-weight:600">65.7%</td>
+  <td style="color:#f87171;font-weight:600">-$480K</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>Success Preparatory Academy</td>
+  <td style="color:#4ade80;font-weight:600">11.64</td>
+  <td style="color:#4ade80;font-weight:600">139</td>
+  <td style="color:#4ade80;font-weight:600">0.08</td>
+  <td style="color:#4ade80;font-weight:600">43.0%</td>
+  <td style="color:#f87171;font-weight:600">-5.9%</td>
+  <td style="color:#4ade80;font-weight:600">67.0%</td>
+  <td style="color:#f87171;font-weight:600">-$635K</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>Young Audiences at Lawrence Crocker</td>
+  <td style="color:#f87171;font-weight:600">1.04</td>
+  <td style="color:#4ade80;font-weight:600">85</td>
+  <td style="color:#4ade80;font-weight:600">0.81</td>
+  <td style="color:#4ade80;font-weight:600">13.0%</td>
+  <td style="color:#4ade80;font-weight:600">0.1%</td>
+  <td style="color:#4ade80;font-weight:600">58.5%</td>
+  <td style="color:#f87171;font-weight:600">-$524K</td>
+  <td><span class="status-pill watch">Monitor</span></td>
+</tr><tr>
+  <td>Bricolage Academy</td>
+  <td style="color:#4ade80;font-weight:600">9.02</td>
+  <td style="color:#4ade80;font-weight:600">91</td>
+  <td style="color:#4ade80;font-weight:600">0.18</td>
+  <td style="color:#4ade80;font-weight:600">23.0%</td>
+  <td style="color:#4ade80;font-weight:600">5.6%</td>
+  <td style="color:#4ade80;font-weight:600">63.2%</td>
+  <td style="color:#4ade80;font-weight:600">$526K</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>CANO</td>
+  <td style="color:#4ade80;font-weight:600">1.55</td>
+  <td style="color:#4ade80;font-weight:600">347</td>
+  <td style="color:#4ade80;font-weight:600">0.64</td>
+  <td style="color:#4ade80;font-weight:600">95.0%</td>
+  <td style="color:#4ade80;font-weight:600">24.0%</td>
+  <td style="color:#4ade80;font-weight:600">46.6%</td>
+  <td style="color:#4ade80;font-weight:600">$3.2M</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>Collegiate Academies</td>
+  <td style="color:#4ade80;font-weight:600">6.32</td>
+  <td style="color:#4ade80;font-weight:600">163</td>
+  <td style="color:#4ade80;font-weight:600">0.15</td>
+  <td style="color:#4ade80;font-weight:600">42.0%</td>
+  <td style="color:#4ade80;font-weight:600">9.6%</td>
+  <td style="color:#4ade80;font-weight:600">55.7%</td>
+  <td style="color:#4ade80;font-weight:600">$4.1M</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>Educators for Quality Alternatives</td>
+  <td style="color:#4ade80;font-weight:600">7.59</td>
+  <td style="color:#4ade80;font-weight:600">139</td>
+  <td style="color:#4ade80;font-weight:600">0.11</td>
+  <td style="color:#4ade80;font-weight:600">45.0%</td>
+  <td style="color:#4ade80;font-weight:600">2.5%</td>
+  <td style="color:#4ade80;font-weight:600">60.0%</td>
+  <td style="color:#f87171;font-weight:600">-$253K</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>FirstLine Schools</td>
+  <td style="color:#4ade80;font-weight:600">9.43</td>
+  <td style="color:#4ade80;font-weight:600">351</td>
+  <td style="color:#4ade80;font-weight:600">0.11</td>
+  <td style="color:#4ade80;font-weight:600">94.0%</td>
+  <td style="color:#fbbf24;font-weight:600">-0.9%</td>
+  <td style="color:#4ade80;font-weight:600">59.3%</td>
+  <td style="color:#4ade80;font-weight:600">$2.4M</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>Hynes Charter School Corporation</td>
+  <td style="color:#4ade80;font-weight:600">8.93</td>
+  <td style="color:#4ade80;font-weight:600">370</td>
+  <td style="color:#4ade80;font-weight:600">0.51</td>
+  <td style="color:#4ade80;font-weight:600">95.0%</td>
+  <td style="color:#fbbf24;font-weight:600">-1.2%</td>
+  <td style="color:#4ade80;font-weight:600">67.8%</td>
+  <td style="color:#f87171;font-weight:600">-$294K</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>InspireNOLA Charter Schools</td>
+  <td style="color:#4ade80;font-weight:600">7.98</td>
+  <td style="color:#4ade80;font-weight:600">148</td>
+  <td style="color:#4ade80;font-weight:600">0.12</td>
+  <td style="color:#4ade80;font-weight:600">44.0%</td>
+  <td style="color:#fbbf24;font-weight:600">-1.6%</td>
+  <td style="color:#4ade80;font-weight:600">66.6%</td>
+  <td style="color:#f87171;font-weight:600">-$5.2M</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>Mary McLeod Bethune Elementary</td>
+  <td style="color:#4ade80;font-weight:600">7.98</td>
+  <td style="color:#4ade80;font-weight:600">148</td>
+  <td style="color:#4ade80;font-weight:600">0.12</td>
+  <td style="color:#4ade80;font-weight:600">44.0%</td>
+  <td style="color:#fbbf24;font-weight:600">-2.2%</td>
+  <td style="color:#4ade80;font-weight:600">65.9%</td>
+  <td style="color:#4ade80;font-weight:600">$758K</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>Morris Jeff Community School</td>
+  <td style="color:#4ade80;font-weight:600">10.06</td>
+  <td style="color:#4ade80;font-weight:600">200</td>
+  <td style="color:#4ade80;font-weight:600">0.10</td>
+  <td style="color:#4ade80;font-weight:600">52.0%</td>
+  <td style="color:#f87171;font-weight:600">-3.3%</td>
+  <td style="color:#4ade80;font-weight:600">63.9%</td>
+  <td style="color:#f87171;font-weight:600">-$1.6M</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>ReNEW Schools</td>
+  <td style="color:#4ade80;font-weight:600">10.44</td>
+  <td style="color:#4ade80;font-weight:600">138</td>
+  <td style="color:#4ade80;font-weight:600">0.09</td>
+  <td style="color:#4ade80;font-weight:600">45.0%</td>
+  <td style="color:#f87171;font-weight:600">-4.7%</td>
+  <td style="color:#4ade80;font-weight:600">70.8%</td>
+  <td style="color:#4ade80;font-weight:600">$4.6M</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>The Friends of King School, Dr. Martin Luther King, Jr. Elem</td>
+  <td style="color:#4ade80;font-weight:600">6.42</td>
+  <td style="color:#4ade80;font-weight:600">144</td>
+  <td style="color:#4ade80;font-weight:600">0.16</td>
+  <td style="color:#4ade80;font-weight:600">40.0%</td>
+  <td style="color:#4ade80;font-weight:600">14.9%</td>
+  <td style="color:#4ade80;font-weight:600">58.6%</td>
+  <td style="color:#4ade80;font-weight:600">$211K</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>The Willow School</td>
+  <td style="color:#4ade80;font-weight:600">24.45</td>
+  <td style="color:#4ade80;font-weight:600">78</td>
+  <td style="color:#4ade80;font-weight:600">0.20</td>
+  <td style="color:#4ade80;font-weight:600">80.0%</td>
+  <td style="color:#4ade80;font-weight:600">2.5%</td>
+  <td style="color:#4ade80;font-weight:600">71.6%</td>
+  <td style="color:#f87171;font-weight:600">-$302K</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>WARREN EASTON CHARTER HIGH SCHOOL</td>
+  <td style="color:#4ade80;font-weight:600">5.67</td>
+  <td style="color:#4ade80;font-weight:600">203</td>
+  <td style="color:#4ade80;font-weight:600">0.65</td>
+  <td style="color:#4ade80;font-weight:600">14.0%</td>
+  <td style="color:#f87171;font-weight:600">-4.2%</td>
+  <td style="color:#4ade80;font-weight:600">62.6%</td>
+  <td style="color:#4ade80;font-weight:600">$130K</td>
+  <td><span class="status-pill strong">Strong</span></td>
+</tr><tr>
+  <td>Audubon Charter Schools</td>
+  <td style="color:#4ade80;font-weight:600">52.79</td>
+  <td style="color:#4ade80;font-weight:600">131</td>
+  <td style="color:#4ade80;font-weight:600">0.13</td>
+  <td style="color:#4ade80;font-weight:600">68.0%</td>
+  <td style="color:#4ade80;font-weight:600">7.5%</td>
+  <td style="color:#4ade80;font-weight:600">54.9%</td>
+  <td style="color:#f87171;font-weight:600">-$2.8M</td>
+  <td><span class="status-pill strong">Exemplary</span></td>
+</tr><tr>
+  <td>Benjamin Franklin High School</td>
+  <td style="color:#4ade80;font-weight:600">12.55</td>
+  <td style="color:#4ade80;font-weight:600">219</td>
+  <td style="color:#4ade80;font-weight:600">0.06</td>
+  <td style="color:#4ade80;font-weight:600">88.0%</td>
+  <td style="color:#4ade80;font-weight:600">0.7%</td>
+  <td style="color:#4ade80;font-weight:600">71.6%</td>
+  <td style="color:#f87171;font-weight:600">-$245K</td>
+  <td><span class="status-pill strong">Exemplary</span></td>
+</tr><tr>
+  <td>Fannie C Williams Charter School</td>
+  <td style="color:#4ade80;font-weight:600">24.01</td>
+  <td style="color:#4ade80;font-weight:600">506</td>
+  <td style="color:#4ade80;font-weight:600">0.04</td>
+  <td style="color:#4ade80;font-weight:600">139.0%</td>
+  <td style="color:#4ade80;font-weight:600">1.5%</td>
+  <td style="color:#4ade80;font-weight:600">60.3%</td>
+  <td style="color:#f87171;font-weight:600">-$283K</td>
+  <td><span class="status-pill strong">Exemplary</span></td>
+</tr><tr>
+  <td>Homer Plessy Community School</td>
+  <td style="color:#4ade80;font-weight:600">36.11</td>
+  <td style="color:#4ade80;font-weight:600">329</td>
+  <td style="color:#4ade80;font-weight:600">0.03</td>
+  <td style="color:#4ade80;font-weight:600">99.0%</td>
+  <td style="color:#4ade80;font-weight:600">10.3%</td>
+  <td style="color:#4ade80;font-weight:600">59.0%</td>
+  <td style="color:#4ade80;font-weight:600">$779K</td>
+  <td><span class="status-pill strong">Exemplary</span></td>
+</tr><tr>
+  <td>Lake Forest Charter School</td>
+  <td style="color:#4ade80;font-weight:600">19.64</td>
+  <td style="color:#4ade80;font-weight:600">256</td>
+  <td style="color:#4ade80;font-weight:600">0.05</td>
+  <td style="color:#4ade80;font-weight:600">92.0%</td>
+  <td style="color:#4ade80;font-weight:600">3.0%</td>
+  <td style="color:#4ade80;font-weight:600">60.5%</td>
+  <td style="color:#4ade80;font-weight:600">$4.8M</td>
+  <td><span class="status-pill strong">Exemplary</span></td>
+</tr><tr>
+  <td>Rooted School</td>
+  <td style="color:#4ade80;font-weight:600">22.05</td>
+  <td style="color:#4ade80;font-weight:600">233</td>
+  <td style="color:#4ade80;font-weight:600">0.04</td>
+  <td style="color:#4ade80;font-weight:600">78.0%</td>
+  <td style="color:#4ade80;font-weight:600">4.6%</td>
+  <td style="color:#4ade80;font-weight:600">56.1%</td>
+  <td style="color:#f87171;font-weight:600">-$174K</td>
+  <td><span class="status-pill strong">Exemplary</span></td>
+</tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── SECTION 08: STRATEGIC RECOMMENDATIONS ──────────────────────── -->
+<div class="section-header">
+  <div class="section-num">08 —</div>
+  <div>
+    <h2>Strategic Recommendations</h2>
+    <p>Data-driven action items for district leadership, finance teams, and school operators based on Q3 FY 2025–26 findings.</p>
+  </div>
+</div>
+
+<div class="rec-section">
+  <div class="rec-grid">
+    <div class="rec-card">
+  <div class="rec-num">01</div>
+  <div class="rec-tag near">Near-Term (Q4)</div>
+  <h4>Negative Operating Cash Flow — 17 CMOs</h4>
+  <p>KIPP New Orleans Schools, Crescent City Schools, Morris Jeff Community School report negative cash from operations — meaning reserves are subsidizing operations. If this pattern continues into Q4, fund balance erosion will accelerate and CSAF metrics will follow.</p>
+</div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<!-- ── SECTION 09: DISTRICT SCORECARD ─────────────────────────────── -->
+<div class="section-header">
+  <div class="section-num">09 —</div>
+  <div>
+    <h2>District Scorecard — Q3 FY 2025–26</h2>
+    <p>Aggregated performance across all financial accountability metrics. Enhanced to include operating surplus compliance and critical/watch tier counts.</p>
+  </div>
+</div>
+
+<div class="score-overview" style="grid-template-columns:repeat(4,1fr)">
+  <div class="score-item">
+  <div class="metric-val excellent">96%</div>
+  <div class="metric-name">Current Ratio</div>
+  <div class="metric-bench">Target ≥ 1.5 | 27 of 28 pass</div>
+</div><div class="score-item">
+  <div class="metric-val good">93%</div>
+  <div class="metric-name">Cash on Hand</div>
+  <div class="metric-bench">Target ≥ 60 days | 26 of 28 pass</div>
+</div><div class="score-item">
+  <div class="metric-val excellent">100%</div>
+  <div class="metric-name">Leverage</div>
+  <div class="metric-bench">Target ≤ 0.90 | 28 of 28 pass</div>
+</div><div class="score-item">
+  <div class="metric-val excellent">100%</div>
+  <div class="metric-name">Fund Balance</div>
+  <div class="metric-bench">Target ≥ 10% | 28 of 28 pass</div>
+</div><div class="score-item">
+  <div class="metric-val alert">46%</div>
+  <div class="metric-name">Operating Surplus</div>
+  <div class="metric-bench">Revenue > Exp. | 13 of 28</div>
+</div><div class="score-item">
+  <div class="metric-val excellent">0</div>
+  <div class="metric-name">Critical / Watch</div>
+  <div class="metric-bench">CMOs requiring intervention</div>
+</div><div class="score-item">
+  <div class="metric-val excellent">19</div>
+  <div class="metric-name">Strong / Exemplary</div>
+  <div class="metric-bench">CMOs above all thresholds</div>
+</div>
+</div>
+
+</div><!-- end .page -->
+
+<div class="footer-bar"></div>
+<div class="report-footer">
+  <div class="footer-brand">
+    New Orleans Public Schools
+    <span>Office of Financial Accountability</span>
+  </div>
+  <div style="font-size:12px;color:var(--text-muted);text-align:right">
+    Q3 FY 2025–26 Financial Accountability Report<br>
+    Prepared by Emmanuel Igbokwe &nbsp;|&nbsp; June 30, 2026<br>
+    <strong>Confidential — For Official Use Only</strong>
+  </div>
+</div>
+
+</body></html>
